@@ -14,7 +14,7 @@ public class ProductServiceTest {
 
     @Before
     public void setUp() throws Exception {
-        service = new ProductService();
+ //       service = new ProductService();
     }
 
     @Test

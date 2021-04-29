@@ -7,7 +7,7 @@ import lv.lu.finalwork.model.ui.ProductInputData;
 
 import java.math.BigDecimal;
 
-class ProductMapper {
+public class ProductMapper {
 
     ProductData mapFrom(Product product) {
         ProductData productData = new ProductData(

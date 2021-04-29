@@ -9,11 +9,12 @@ import java.util.Scanner;
 
 public class ConsulUI {
 
-    private ProductService service;
-    private final Scanner scanner = new Scanner(System.in);
+    private final ProductService service;
+    private final Scanner scanner;
 
-    public ConsulUI() {
-        this.service = new ProductService();
+    public ConsulUI(ProductService service, Scanner scanner) {
+        this.service = service;
+        this.scanner = scanner;
     }
 
     public void startUi() {

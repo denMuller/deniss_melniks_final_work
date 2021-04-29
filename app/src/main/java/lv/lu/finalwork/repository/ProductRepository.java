@@ -14,10 +14,6 @@ public class ProductRepository implements Repository<Product> {
         this.repository = repository;
     }
 
-    public ProductRepository() {
-        this.repository = new HashMap<>();
-    }
-
     @Override
     public Long save(Product productEntity) {
         productEntity.setId(idCounter);

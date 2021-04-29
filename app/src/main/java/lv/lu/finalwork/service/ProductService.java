@@ -17,11 +17,12 @@ import java.util.stream.Collectors;
 
 public class ProductService {
 
-    private ProductRepository repository;
-    private ProductMapper mapper = new ProductMapper();
+    private final ProductRepository repository;
+    private final ProductMapper mapper;
 
-    public ProductService() {
-        this.repository = new ProductRepository();
+    public ProductService(ProductRepository repository, ProductMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
     }
 
     public void save(ProductInputData productInputData) {
