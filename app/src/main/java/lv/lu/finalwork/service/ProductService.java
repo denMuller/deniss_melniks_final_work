@@ -1,16 +1,12 @@
 package lv.lu.finalwork.service;
 
 
-
 import lv.lu.finalwork.model.ItemNotFoundException;
 import lv.lu.finalwork.model.repository.Product;
-import lv.lu.finalwork.model.repository.ProductCategory;
 import lv.lu.finalwork.model.ui.ProductData;
 import lv.lu.finalwork.model.ui.ProductInputData;
 import lv.lu.finalwork.repository.ProductRepository;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -26,7 +22,8 @@ public class ProductService {
     }
 
     public void save(ProductInputData productInputData) {
-        repository.save(mapper.mapFrom(productInputData));
+        final Product product = mapper.mapFrom(productInputData);
+        repository.save(product);
     }
 
     public List<ProductData> findAll() {

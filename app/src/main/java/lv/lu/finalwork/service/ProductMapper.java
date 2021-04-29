@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 public class ProductMapper {
 
-    ProductData mapFrom(Product product) {
+    public ProductData mapFrom(Product product) {
         ProductData productData = new ProductData(
                 product.getId().toString(),
                 product.getName(),
@@ -18,7 +18,7 @@ public class ProductMapper {
         return productData;
     }
 
-    Product mapFrom(ProductInputData productInputData) {
+    public Product mapFrom(ProductInputData productInputData) {
         Product product = new Product();
         product.setName(productInputData.getName());
         product.setPrice(BigDecimal.valueOf(productInputData.getPrice()));
